@@ -11,14 +11,19 @@ Now that you've learned the fundamentals of React, it's time to practice and exp
 This assignment is open-ended when it comes to the actual content. You are free to create whatever you'd like, as long as it incorporates the requirements listed in these instructions.
 
 ## Requirements
-You must make a single page application (only one index.html file) using create-react-app.
-Your app should use at least 3 components in a way that keeps your code well organized.
-There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include a nav bar or other UI element that allows users to navigate between routes.
+1. You must make a single page application (only one index.html file) using create-react-app.
+2. Your app should use at least 3 components in a way that keeps your code well organized.
+3. There should be at least 2 client-side routes using React RouterLinks to an external site.. Be sure to include 
+    a nav bar or other UI element that allows users to navigate between routes.
 
-Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server. Use a form to make your post request, specifically a controlled form/component. Additionally, you may choose to incorporate data from an external API but it is not required.
+4. Use a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json 
+   server.
+5. Use a form to make your post request, specifically a controlled form/component. Additionally, you may choose 
+   to incorporate data from an external API but it is not required.
 
-You should keep your json-server data simple: avoid nested data and associations. You'll learn how to work with more complex data in the next two phases. Focus on the frontend for this project.
-Upon return of json from your POST request, a state update by a setState function is required!
+6. You should keep your json-server data simple: avoid nested data and associations. You'll learn how to work 
+   with more complex data in the next two phases. Focus on the frontend for this project.
+    Upon return of json from your POST request, a state update by a setState function is required!
  // in App:
  function addMovie(newMovie){
   setMovies([...movies, newMovie]) // Updating movies state.
