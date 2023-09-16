@@ -28,7 +28,8 @@ Upon return of json from your POST request, a state update by a setState functio
 
 Remember: responsibility for re-rendering the page to display the updated list of movies should belong to the addMovie function; depending on a subsequent action to load the new data is not best practice.
 
-Stretch Goals
+ ## Stretch Goals
+
 Use more components and client-side routes.
 Add some styling: you're encouraged to write your CSS from scratch, either by using styled componentsLinks to an external site. or writing CSS files and using id/className to style your elements. You can also incorporate a UI framework (like React BootstrapLinks to an external site., Semantic UILinks to an external site., or Material UILinks to an external site.) if you prefer.
 Incorporate data from an external API. Check out this list of APIsLinks to an external site. if you need some inspiration!
