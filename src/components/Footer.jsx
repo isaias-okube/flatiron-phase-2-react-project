@@ -3,7 +3,12 @@ import React from 'react'
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2021</p>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/drinks">Drinks</a></li>
+        <li><a href="/food">Food</a></li>
+      </ul>
+      <p>&copy; 2023</p>
     </footer>
   )
 }
