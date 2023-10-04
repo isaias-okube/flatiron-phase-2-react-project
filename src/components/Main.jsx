@@ -1,8 +1,11 @@
 import React from 'react'
+import Drinks from './Drinks'
 
 function Main() {
   return (
-    <div>Main</div>
+    <main>
+      <Drinks />
+    </main>
   )
 }
 
