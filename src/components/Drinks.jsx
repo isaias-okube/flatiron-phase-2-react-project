@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 function Drinks() {
     const [Drinks, setDrinks] = useState([])
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         const fetchDrinks = async () => {
@@ -19,8 +20,14 @@ function Drinks() {
     }
     , [])
 
+    function filterDrinks() {
+        return Drinks.filter(drink => {
+            return drink.strDrink.toLowerCase().includes(search.toLowerCase())
+        })
+    }
+
 function renderDrinks() {
-    return Drinks.map(drink => {
+    return filterDrinks().map(drink => {
         return (
             <tr key={drink.idDrink}>
                 <td><img src={drink.strDrinkThumb} alt={drink.strDrink} /></td>
@@ -32,23 +39,18 @@ function renderDrinks() {
     })}
 
     function handleSearchChange(event) {
-        event.preventDefault()
-        const search = event.target.value
-        const url = `http://localhost:3002/drinks?search=${search}`
-        fetch(url)
-            .then(response => response.json())
-            .then(data => setDrinks(data))
-            .catch(err => console.log(err))
+        setSearch(event.target.value)
     }
+
     return (
         <>
         <h1>Drinks</h1>
         <form>
             <label htmlFor="search">Search</label>
             <input 
-              type="text" 
-              id="search" 
-              name="search" 
+              type="text"
+                id="search"
+                name="search"
               placeholder='Search for a drink' 
               onChange={handleSearchChange}
               />
