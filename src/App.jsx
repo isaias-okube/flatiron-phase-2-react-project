@@ -1,19 +1,36 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header'
+import Home from './components/Home'
 import Main from './components/Main'
-import Footer from './components/Footer'
+import About from './components/About'
+import Navbar from './components/Navbar'
+import { Component } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
+  let Component = null
 
+switch(window.location.pathname) {
+
+  case '/':
+    Component = Home
+    break;
+
+  case '/drinks':
+    Component = Main
+    break;
+
+  case '/about':
+    Component = About
+    break;
+}
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+    <Navbar />
+  <Component />
+    
     </>
   )
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+ import { useEffect, useState } from 'react'
 
 function Drinks() {
     const [Drinks, setDrinks] = useState([])
@@ -26,14 +26,14 @@ function Drinks() {
         })
     }
 
-function renderDrinks() {
+function renderDrinkDetails() {
     return filterDrinks().map(drink => {
         return (
-            <tr key={drink.idDrink}>
-                <td><img src={drink.strDrinkThumb} alt={drink.strDrink} /></td>
+            <tr key={drink.strDrink}>
+                <td><img src={drink.strDrinkThumb} /></td>
+                <td>{drink.strDrink}</td>
                 <td>{drink.strCategory}</td>
-                <td>{drink.strIngredient1}</td>
-                <td>{drink.idDrink}</td>
+                
             </tr>
         )
     })}
@@ -44,9 +44,7 @@ function renderDrinks() {
 
     return (
         <>
-        <h1>Drinks</h1>
         <form>
-            <label htmlFor="search">Search</label>
             <input 
               type="text"
                 id="search"
@@ -54,19 +52,19 @@ function renderDrinks() {
               placeholder='Search for a drink' 
               onChange={handleSearchChange}
               />
-            <button type="submit">Submit</button>
+            <button onClick={filterDrinks}>Search</button>
+      
         </form>
         <table>
             <thead>
                 <tr>
                     <th>Image</th>
+                    <th>Name</th>
                     <th>Category</th>
-                    <th>Ingrediant</th>
-                    <th>ID</th>
                     </tr>
             </thead>
             <tbody>
-                {renderDrinks()}
+                {renderDrinkDetails()}
             </tbody>
         </table>
         </>
@@ -74,3 +72,45 @@ function renderDrinks() {
     }
 
 export default Drinks
+
+// import React, { useState } from 'react';
+
+// function Drinks() {
+//   const [drink, setDrink] = useState(null);
+
+//   const fetchRandomDrink = async () => {
+//     const url = 'http://localhost:3002/randomDrink';
+//     try {
+//       const response = await fetch(url);
+//       const data = await response.json();
+//       setDrink(data);
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   };
+
+//   const renderDrinkDetails = () => {
+//     if (drink) {
+//       return (
+//         <div>
+//           <h2>{drink.strDrink}</h2>
+//           <p>Category: {drink.strCategory}</p>
+//           <p>Ingredient: {drink.strIngredient}</p>
+//           <p>ID: {drink.idDrink}</p>
+//           <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+//         </div>
+//       );
+//     } else {
+//       return <p>No drink selected. Click the button to fetch a random drink.</p>;
+//     }
+//   };
+
+//   return (
+//     <>
+//       <button onClick={fetchRandomDrink}>Fetch Random Drink</button>
+//       {renderDrinkDetails()}
+//     </>
+//   );
+// }
+
+// export default Drinks;
