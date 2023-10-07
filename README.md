@@ -53,6 +53,8 @@ For this project, you will need two separate repositories: one for your frontend
 
 ## Frontend Setup
 Use create-react-app to generate starter code for your project. Follow the instructions on the create-react-appLinks to an external site. site to get started.
+## Backend link
+https://github.com/isaias-okube/flatiron-phase-2-react-project-json-server
 
 ## Backend Setup
 You can use this json-server templateLinks to an external site. to generate your backend code. Using this template will make it easier to deploy your backend later on.
