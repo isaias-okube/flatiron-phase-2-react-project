@@ -1,14 +1,23 @@
 import React from 'react'
 
+function CustomLink({ herf, children }) {
+  return (
+    <li>
+      <a href={herf}>{children}</a>
+    </li>
+  )
+}
+
 function Navbar() {
-  
-        return (
-          <nav className="nav">
-              <a href="/" className="nav__link">Home</a>
-              <a href="/drinks" className="nav__link">Drinks</a>
-              <a href="/about" className="nav__link">About</a>
-          </nav>
-        )
-      }
-      
-      export default Navbar;
+  return (
+    <nav>
+      <ul>
+        <CustomLink herf="/">Home</CustomLink>
+        <CustomLink herf="/drinks">Drinks</CustomLink>
+        <CustomLink herf="/about">About</CustomLink>
+      </ul>
+    </nav>
+  )
+}
+
+export default Navbar
