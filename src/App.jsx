@@ -1,36 +1,22 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
-import Home from './components/Home'
 import Main from './components/Main'
+import Home from './components/Home'
 import About from './components/About'
 import Navbar from './components/Navbar'
-import { Component } from 'react'
+import {Route, Routes} from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-  let Component = null
-
-switch(window.location.pathname) {
-
-  case '/':
-    Component = Home
-    break;
-
-  case '/drinks':
-    Component = Main
-    break;
-
-  case '/about':
-    Component = About
-    break;
-}
   return (
     <>
-    <Navbar />
-  <Component />
-    
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/drinks' element={<Main />} />
+      </Routes>
     </>
   )
 }
 
-export default App;
+export default App
