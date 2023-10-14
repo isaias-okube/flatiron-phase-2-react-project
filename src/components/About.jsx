@@ -5,7 +5,7 @@ function About() {
     <header>
       <h2>The Cocktail DB: Your Go-To Cocktail Resource</h2>
       <p>
-      The Cocktail DB is a free, online database of cocktail recipes. It's also a crowdsourced database of cocktail information and photos. The Cocktail DB is built by cocktail enthusiasts worldwide and is free for anyone to use.
+      The Cocktail DB: A free online hub for cocktail recipes, photos, and information, created and maintained by cocktail enthusiasts worldwide
       </p>
       <p>2021 The Cocktail DB</p>
       
