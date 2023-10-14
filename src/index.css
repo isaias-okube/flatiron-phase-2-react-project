@@ -3,12 +3,20 @@
 
   color-scheme: light dark;
   color: rgba(137, 201, 188, 0.87);
-  background-color: #2f4e58;
+  background-color: #507784;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color-scheme: light dark;
+  color: rgba(137, 201, 188, 0.87);
+  background-color: #507784;
+}
+
 
 a {
   font-weight: 500;
-  color: #6181eb;
+  color: #3b41f8;
   text-decoration: inherit;
 }
 
