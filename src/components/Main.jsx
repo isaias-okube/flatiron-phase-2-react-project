@@ -4,7 +4,7 @@ import Drinks from './Drinks'
 function Main() {
     return (
         <main>
-            <p>Drinks are great!</p>
+            <p>Welcome to TheCocktailDB</p>
             <Drinks />
         </main>
     )
