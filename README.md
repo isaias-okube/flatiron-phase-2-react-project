@@ -25,6 +25,9 @@ Follow these steps to set up and run the Drinks App on your local machine:
 
 This command will launch the development server, and the application will be accessible in your web browser at http://localhost:3002/drinks
 
+## Backend Link
+https://github.com/isaias-okube/flatiron-phase-2-react-project-json-server
+
 ## Usage
 * Search for Drinks: In the search bar, enter a keyword or part of a drink's name, and click the "Search" button. The app will display a list of drinks that match your search criteria.
 
