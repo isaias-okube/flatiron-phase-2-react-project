@@ -23,7 +23,7 @@ Follow these steps to set up and run the Drinks App on your local machine:
 
 4. Start the Application: Once the installation is complete, you can start the application with the following command: npm run dev
 
-This command will launch the development server, and the application will be accessible in your web browser at http://localhost:3002.
+This command will launch the development server, and the application will be accessible in your web browser at http://localhost:3002/drinks
 
 ## Usage
 * Search for Drinks: In the search bar, enter a keyword or part of a drink's name, and click the "Search" button. The app will display a list of drinks that match your search criteria.
