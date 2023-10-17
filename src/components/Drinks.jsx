@@ -82,7 +82,7 @@ function Drinks() {
             <form>
                 <input
                     type="text"
-                    id="search"
+                    id="id"
                     name="search"
                     placeholder="Search for a drink"
                     value={search}
@@ -97,7 +97,7 @@ function Drinks() {
                 <label htmlFor="strDrink">Name</label>
                 <input
                     type="text"
-                    id="strDrink"
+                    id="id"
                     name="strDrink"
                     value={newDrink.strDrink}
                     onChange={handleNewDrinkChange}
@@ -105,7 +105,7 @@ function Drinks() {
                 <label htmlFor="strDrinkThumb">Image</label>
                 <input
                     type="text"
-                    id="strDrinkThumb"
+                    id="id"
                     name="strDrinkThumb"
                     value={newDrink.strDrinkThumb}
                     onChange={handleNewDrinkChange}
@@ -113,7 +113,7 @@ function Drinks() {
                 <label htmlFor="strCategory">Category</label>
                 <input
                     type="text"
-                    id="strCategory"
+                    id="id"
                     name="strCategory"
                     value={newDrink.strCategory}
                     onChange={handleNewDrinkChange}
