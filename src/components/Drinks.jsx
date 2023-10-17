@@ -4,9 +4,10 @@ function Drinks() {
     const [drinks, setDrinks] = useState([]);
     const [search, setSearch] = useState('');
     const [newDrink, setNewDrink] = useState({
-        name: '',
-        image: '',
-        category: '',
+        id: '',
+        strDrink: '',
+        strDrinkThumb: '',
+        strCategory: '',
     });
 
     useEffect(() => {
@@ -32,7 +33,7 @@ function Drinks() {
 
     function renderDrinkDetails() {
         return filterDrinks().map((drink) => (
-            <tr key={drink.strDrink}>
+            <tr key={drink.id}>
                 <td>
                     <img src={drink.strDrinkThumb} alt={drink.strDrink} />
                 </td>
@@ -60,9 +61,10 @@ function Drinks() {
             .then((data) => {
                 setDrinks([...drinks, data]);
                 setNewDrink({
-                    name: '',
-                    image: '',
-                    category: '',
+                    id: '',
+                    strDrink: '',
+                    strDrinkThumb: '',
+                    strCategory: '',
                 });
             });
     }
@@ -76,44 +78,49 @@ function Drinks() {
     }
 
     return (
-        <>
-            <form onSubmit={(e) => e.preventDefault()}>
+        <div>
+            <form>
                 <input
                     type="text"
                     id="search"
                     name="search"
                     placeholder="Search for a drink"
+                    value={search}
                     onChange={handleSearchChange}
                 />
-                <button onClick={filterDrinks}>Search</button>
+                <button type="button" onClick={filterDrinks}>
+                    Search
+                </button>
             </form>
 
             <form>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="strDrink">Name</label>
                 <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={newDrink.name}
+                    id="strDrink"
+                    name="strDrink"
+                    value={newDrink.strDrink}
                     onChange={handleNewDrinkChange}
                 />
-                <label htmlFor="image">Image</label>
+                <label htmlFor="strDrinkThumb">Image</label>
                 <input
                     type="text"
-                    id="image"
-                    name="image"
-                    value={newDrink.image}
+                    id="strDrinkThumb"
+                    name="strDrinkThumb"
+                    value={newDrink.strDrinkThumb}
                     onChange={handleNewDrinkChange}
                 />
-                <label htmlFor="category">Category</label>
+                <label htmlFor="strCategory">Category</label>
                 <input
                     type="text"
-                    id="category"
-                    name="category"
-                    value={newDrink.category}
+                    id="strCategory"
+                    name="strCategory"
+                    value={newDrink.strCategory}
                     onChange={handleNewDrinkChange}
                 />
-                <button type="button" onClick={addNewDrink}>Add New Drink</button>
+                <button type="button" onClick={addNewDrink}>
+                    Add New Drink
+                </button>
             </form>
 
             <table>
@@ -126,7 +133,7 @@ function Drinks() {
                 </thead>
                 <tbody>{renderDrinkDetails()}</tbody>
             </table>
-        </>
+        </div>
     );
 }
 
